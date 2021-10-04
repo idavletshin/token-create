@@ -1,0 +1,77 @@
+.text-field {
+  position: relative;
+}
+
+.text-field-container {
+  width: 100%;
+}
+
+.text-field-container--sm {
+  max-width: 13.125rem;
+}
+
+.text-field__input {
+  height: 2.5rem;
+  width: 100%;
+  padding: 0;
+  color: var(--white);
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+
+.text-field__textarea {
+  height: 6.25rem;
+  width: 100%;
+  padding: 0.5rem 0;
+  color: var(--white);
+  font-size: 0.875rem;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+
+.text-field__input::placeholder,
+.text-field__textarea::placeholder {
+  color: var(--gray);
+}
+
+.text-field__textarea::placeholder {
+  font-size: 1rem;
+}
+
+/* reset input */
+.text-field__input:required {
+  box-shadow: none;
+}
+
+.text-field__input:invalid {
+  box-shadow: none;
+}
+
+/* *** */
+
+/* Стили для бордера у поля ввода */
+
+.text-field__line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.125rem;
+  width: 100%;
+  background-color: var(--purple);
+}
+
+.text-field__line.error {
+  height: 0.125rem;
+  background-color: var(--dark-orange);
+}
+
+.text-field__line.success,
+.text-field__input:focus ~ .text-field__line,
+.text-field__textarea:focus ~ .text-field__line {
+  height: 0.125rem;
+  background-color: var(--light-green);
+}
+
+/* *** */

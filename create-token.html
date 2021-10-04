@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Token creation</title>
+  </head>
+  <body class="">
+    <div class="token">
+      <div class="container">
+        <div class="token__wrapper">
+          <h1 class="main-title">Создать UFO токен</h1>
+          <p class="text">
+            An open-source, fully-decentralized asset platform on the Bitcoin
+            Blockchain. Built on top of the Bitcoin blockchain.
+          </p>
+          <form action="#" class="form">
+            <div class="form-group">
+              <label class="form-group__label" for="tokenName"
+                >Название токена</label
+              >
+              <div
+                class="form-group__text-field-container text-field-container"
+              >
+                <div class="text-field">
+                  <input
+                    id="tokenName"
+                    class="text-field__input"
+                    type="text"
+                    placeholder="Название токена"
+                  />
+                  <!-- no class / error / success -->
+                  <span class="text-field__line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label">Тип токена</label>
+              <div class="form-group__radio-group radio-group">
+                <div class="radio-group__item">
+                  <input
+                    id="divisible"
+                    type="radio"
+                    name="tokenType"
+                    value="divisible"
+                    checked
+                  />
+                  <label for="divisible">Делимый</label>
+                </div>
+                <div class="radio-group__item">
+                  <input
+                    id="indivisible"
+                    type="radio"
+                    name="tokenType"
+                    value="indivisible"
+                  />
+                  <label for="indivisible">Неделимый</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="">Тип выпуска</label>
+              <div class="form-group__radio-group radio-group">
+                <div class="radio-group__item">
+                  <input
+                    id="additionalRelease"
+                    type="radio"
+                    name="releaseType"
+                    value="additionalRelease"
+                  />
+                  <label for="additionalRelease">Довыпуск</label>
+                </div>
+                <div class="radio-group__item">
+                  <input
+                    id="fixed"
+                    type="radio"
+                    name="releaseType"
+                    value="fixed"
+                    checked
+                  />
+                  <label for="fixed">Фиксированный</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="">Категория</label>
+              <div class="form-group__badges">
+                <div class="form-group__badge-list">
+                  <div class="badge rounded--xl">
+                    Category
+                    <span>×</span>
+                  </div>
+                  <div class="badge rounded--xl">
+                    Bitcoin
+                    <span>×</span>
+                  </div>
+                  <div class="badge rounded--xl">
+                    Crypto
+                    <span>×</span>
+                  </div>
+                  <div class="badge rounded--xl">
+                    UFO
+                    <span>×</span>
+                  </div>
+                  <div class="badge rounded--xl">
+                    Category random
+                    <span>×</span>
+                  </div>
+                  <div class="badge rounded--xl">
+                    Coinmarket
+                    <span>×</span>
+                  </div>
+                </div>
+                <button type="button" class="button button--purple rounded--xl">
+                  <span>+</span>
+                  Добавить категорию
+                </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="descriptionUrl"
+                >URL описания</label
+              >
+              <div
+                class="form-group__text-field-container text-field-container"
+              >
+                <div class="text-field">
+                  <input
+                    id="descriptionUrl"
+                    class="text-field__input"
+                    type="text"
+                    placeholder="URL описания"
+                  />
+                  <!-- no class / error / success -->
+                  <span class="text-field__line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="additionalData"
+                >Дополнительные данные</label
+              >
+              <div
+                class="form-group__text-field-container text-field-container"
+              >
+                <div class="text-field">
+                  <textarea
+                    class="text-field__textarea"
+                    name="additionalData"
+                    id="additionalData"
+                    rows="5"
+                    placeholder="Дополнительные данные"
+                  ></textarea>
+                  <!-- no class / error / success -->
+                  <span class="text-field__line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="communicationData"
+                >Данные для связи</label
+              >
+              <div
+                class="form-group__text-field-container text-field-container"
+              >
+                <div class="text-field">
+                  <input
+                    id="communicationData"
+                    class="text-field__input"
+                    type="text"
+                    placeholder="Данные для связи"
+                  />
+                  <!-- no class / error / success -->
+                  <span class="text-field__line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="">Тариф</label>
+              <div class="form-group__radio-group radio-group">
+                <div class="radio-group__item">
+                  <input id="cheap" type="radio" name="rate" value="cheap" />
+                  <label for="cheap">Дешевый</label>
+                </div>
+                <div class="radio-group__item">
+                  <input
+                    id="expensive"
+                    type="radio"
+                    name="rate"
+                    value="expensive"
+                    checked
+                  />
+                  <label for="expensive">Дорогой</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="numberOfTokens"
+                >Количество токенов</label
+              >
+              <div
+                class="
+                  form-group__text-field-container
+                  text-field-container text-field-container--sm
+                "
+              >
+                <div class="text-field">
+                  <input
+                    id="numberOfTokens"
+                    class="text-field__input"
+                    type="number"
+                    placeholder="Количество токенов"
+                  />
+                  <!-- no class / error / success -->
+                  <span class="text-field__line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-group__label" for="ownerAddress"
+                >Адрес владельца</label
+              >
+              <div
+                class="form-group__text-field-container text-field-container"
+              >
+                <div class="text-field">
+                  <input
+                    id="ownerAddress"
+                    class="text-field__input"
+                    type="text"
+                    placeholder="Адрес владельца"
+                  />
+                  <!-- no class / error / success -->
+                  <span class="text-field__line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-actions">
+              <a
+                class="button button--white form-actions__button rounded--xl"
+                href="/"
+                >Назад</a
+              >
+              <button
+                type="button"
+                class="
+                  button button--transparent
+                  form-actions__button
+                  rounded--xl
+                "
+              >
+                Завершить позднее
+              </button>
+              <button
+                id="openModal"
+                type="button"
+                class="button button--yellow form-actions__button rounded--xl"
+              >
+                Создать токен
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- modal form -->
+
+      <div class="modal">
+        <form action="#" class="modal-form">
+          <h3 class="modal-form__title">
+            Громким скандалом обернулся анимированный логотип Олимпиады 2012 в
+            Лондоне.
+          </h3>
+          <p class="modal-form__text">
+            Громким скандалом обернулся анимированный логотип Олимпиады 2012 в
+            Лондоне, который спровоцировал двенадцать зарегистрированных
+            приступов эпилепсии в течение нескольких часов после появления в
+            интернете, lorem ipsum dolor sit amet, l...
+          </p>
+          <div class="form-actions">
+            <button
+              id="closeModal"
+              type="button"
+              class="
+                button button--transparent
+                form-actions__button
+                rounded--xl
+              "
+            >
+              Завершить позднее
+            </button>
+            <button
+              id="createToken"
+              type="button"
+              class="button button--yellow form-actions__button rounded--xl"
+            >
+              Создать токен
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- *** -->
+
+      <!-- information window -->
+
+      <div class="info">
+        <!-- <div class="info-item">
+          <div class="info-item__img-wrap">
+            <img src="./images/arrow-up-circle.svg" alt="" />
+          </div>
+          <h2 class="info-item__title">Отправка UFO</h2>
+          <p class="info-item__text">
+            Отпправьте <span class="purple-color">5000 UFO</span> на адрес
+          </p>
+          <p class="info-item__text info-item__wallet">
+            UchvuofYUFQrrhsn2kXBfYKbqyvQ4vQNo6
+            <span class="copy">
+              <img src="./images/copy.svg" alt="copy" />
+            </span>
+          </p>
+        </div> -->
+
+        <!-- <div class="info-item">
+          <div class="info-item__img-wrap">
+            <img src="./images/pause-circle.svg" alt="" />
+          </div>
+          <h2 class="info-item__title">Подтверждение платежа сетью</h2>
+          <p class="info-item__text dark-orange-color">
+            Вы отправили недостаточну сумму, отправьте еще 500
+            <br />
+            UFO на кошелек
+          </p>
+          <p class="info-item__text info-item__wallet">
+            UchvuofYUFQrrhsn2kXBfYKbqyvQ4vQNo6
+            <span class="copy">
+              <img src="./images/copy.svg" alt="copy" />
+            </span>
+          </p>
+        </div> -->
+
+        <!-- <div class="info-item">
+          <div class="info-item__img-wrap">
+            <img src="./images/loading.svg" alt="" />
+          </div>
+          <h2 class="info-item__title">Подтверждение платежа сетью</h2>
+          <p class="info-item__text">Платеж ожидает подтверждение сетью</p>
+        </div> -->
+
+        <div class="info-item">
+          <div class="info-item__img-wrap">
+            <img src="./images/loading.svg" alt="" />
+          </div>
+          <h2 class="info-item__title">Processing</h2>
+          <p class="info-item__text">
+            Процесс подтверждения платежа, выпуска токена, и
+            <br />
+            предачи прав на него может занять некоторое время
+          </p>
+
+          <ul class="info-item__horizontal-progress horizontal-progress">
+            <li class="active">Платеж подтвержден</li>
+            <li class="waiting">Выпуск токена</li>
+            <li>Передача прав</li>
+          </ul>
+        </div>
+
+        <!-- <div class="info-item">
+          <div class="info-item__img-wrap">
+            <img src="./images/success.svg" alt="" />
+          </div>
+          <h2 class="info-item__title">Токен отправлен</h2>
+          <p class="info-item__text">
+            Токен отправлен на ваш кошелек <br />
+            UchvuofYUFQrrhsn2kXBfYKbqyvQ4vQNo6
+            <br />
+            успешной работы
+          </p>
+        </div> -->
+      </div>
+
+      <!-- *** -->
+    </div>
+    <script src="./js/main.js"></script>
+    <script>
+      const body = document.querySelector("body");
+      const info = document.querySelector(".info");
+      const tokenWrapper = document.querySelector(".token__wrapper");
+      const openModal = document.getElementById("openModal");
+      const closeModal = document.getElementById("closeModal");
+      const modal = document.querySelector(".modal");
+      const createToken = document.getElementById("createToken");
+
+      openModal.addEventListener("click", function () {
+        modal.classList.add("modal-open");
+        body.classList.add("scroll-off");
+      });
+
+      closeModal.addEventListener("click", function () {
+        modal.classList.remove("modal-open");
+        body.classList.remove("scroll-off");
+      });
+
+      createToken.addEventListener("click", function () {
+        modal.classList.remove("modal-open");
+        body.classList.remove("scroll-off");
+        tokenWrapper.style.display = "none";
+        info.style.display = "flex";
+      });
+    </script>
+  </body>
+</html>

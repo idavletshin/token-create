@@ -1,0 +1,14 @@
+:root {
+  --white: #ffffff;
+  --black: #0a0a0d;
+  --dark-gray: #1c1c23;
+  --dark-purple: #4834d4;
+  --purple: #9075e6;
+  --yellow: #f2d03b;
+  --gray: #83839c;
+  --light-green: #d1e171;
+  --green: #a0d387;
+  --dark-orange: #e26f6f;
+
+  --main-font: "Montserrat", sans-serif;
+}

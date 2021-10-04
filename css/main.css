@@ -1,0 +1,295 @@
+@import "variables.css";
+@import "reset.css";
+@import "typography.css";
+@import "scrollbar.css";
+@import "button.css";
+@import "input.css";
+@import "radio.css";
+@import "modal.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body.scroll-off {
+  overflow: hidden;
+}
+
+.purple-color {
+  color: var(--purple);
+}
+
+.dark-orange-color {
+  color: var(--dark-orange);
+}
+
+.main {
+  width: 100%;
+  margin: auto;
+}
+
+.main::after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../images/ribbon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 0 0.9375rem;
+}
+
+.main-title {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.text {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media screen and (max-width: 47.9375rem) {
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 26.5625rem) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* main + footer */
+
+.main .container,
+.footer .container {
+  max-width: 90rem;
+}
+
+.main__wrapper,
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__left,
+.main__right,
+.footer__left,
+.footer__right {
+  width: 45%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .main__wrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 47.9375rem) {
+  .main__left,
+  .main__right,
+  .footer__left,
+  .footer__right {
+    width: 100%;
+  }
+
+  .main__left img {
+    margin: 0 auto 2rem;
+  }
+
+  .footer {
+    margin: 4rem auto 0;
+  }
+}
+
+/* main */
+
+.main__left img {
+  max-width: 35.625rem;
+  width: 100%;
+  height: auto;
+}
+
+.main__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.main .main-title {
+  margin-bottom: 2rem;
+}
+
+.main .text {
+  margin-bottom: 5rem;
+}
+
+.main__action {
+  max-width: 20.625rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .main .text {
+    margin-bottom: 4rem;
+  }
+}
+
+/* footer */
+
+.footer {
+  margin-bottom: 4rem;
+}
+
+.footer__right {
+  margin-left: auto;
+}
+
+/* token */
+
+.token {
+  margin-top: 8rem;
+}
+
+.token .container {
+  max-width: 60rem;
+  padding: 0 1.875rem;
+}
+
+.token__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.token .main-title {
+  margin-bottom: 2rem;
+}
+
+.token .text {
+  width: 70%;
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 47.9375rem) {
+  .token {
+    margin-top: 4rem;
+  }
+
+  .token .main-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .token .text {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 32.8125rem) {
+  .token .container {
+    padding: 0 1.25rem;
+  }
+
+  .token .text {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* form */
+
+.form-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.form-actions {
+  display: flex;
+  align-items: flex-start;
+}
+
+.form .form-actions {
+  margin-bottom: 2.5rem;
+}
+
+.form-group__label {
+  display: inline-flex;
+  align-items: center;
+  height: 2.5rem;
+  max-width: 30%;
+  width: 100%;
+  min-width: 15rem;
+  font-weight: 600;
+}
+
+.form-group__badges .button {
+  height: 2.5rem;
+}
+
+.form-group__badges .button span {
+  margin-right: 1rem;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.form-actions .button:nth-child(1) {
+  margin-right: auto;
+}
+
+.form-actions .button:not(:first-child, :last-child) {
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 37.5rem) {
+  .form-group {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 32.8125rem) {
+  .form-actions {
+    flex-wrap: wrap;
+  }
+
+  .form-actions .button {
+    margin-bottom: 1rem;
+  }
+
+  .form-actions .button:nth-child(1) {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .form-actions .button:not(:nth-child(1)) {
+    flex: 1;
+    margin-right: 0;
+  }
+}
+
+/* Медиазапрос для ретина-дисплеев */
+@media screen and (min-width: 48rem) and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (min-width: 48rem) and (min-resolution: 192dpi),
+  only screen and (min-width: 48rem) and (min-resolution: 2dppx) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
